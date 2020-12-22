@@ -6,20 +6,34 @@
     <title>Survey Form</title>
     <style>
         @font-face {
-            font-family: D-Din-Regular;
+            font-family: 'D-Din-Regular';
             src: url(https://www.datto.com/fonts/DattoDIN-Regular.woff2) format(woff2),
                  url(https://www.datto.com/fonts/DattoDIN-Regular.woff) format(woff);
         }
         @font-face {
-            font-family: D-Din-Bold;
+            font-family: 'D-Din-Bold';
             src: url(https://www.datto.com/fonts/DattoDIN-Bold.woff2) format(woff2),
                  url(https://www.datto.com/fonts/DattoDIN-Bold.woff) format(woff);
         }
         @font-face {
-            font-family: D-Din-BoldCondensed;
+            font-family: 'D-Din-BoldCondensed';
             src: url(https://www.datto.com/fonts/DattoDIN-BoldCondensed.woff2) format(woff2),
                  url(https://www.datto.com/fonts/DattoDIN-BoldCondensed.woff) format(woff);
         }
+        *,
+        *::before
+        *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'D-Din-Regular', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: white;
+            margin: 0;
+        }
+        
     </style>
 </head>
 <body>

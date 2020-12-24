@@ -7,18 +7,21 @@
     <style>
         @font-face {
             font-family: 'D-Din-Regular';
-            src: url(https://www.datto.com/fonts/DattoDIN-Regular.woff2) format(woff2),
-                 url(https://www.datto.com/fonts/DattoDIN-Regular.woff) format(woff);
+            src: url(https://www.datto.com/fonts/DattoDIN-Regular.woff2) format("woff2"),
+                 url(https://www.datto.com/fonts/DattoDIN-Regular.woff) format("woff");
+            font-display: block;
         }
         @font-face {
             font-family: 'D-Din-Bold';
-            src: url(https://www.datto.com/fonts/DattoDIN-Bold.woff2) format(woff2),
-                 url(https://www.datto.com/fonts/DattoDIN-Bold.woff) format(woff);
+            src: url(https://www.datto.com/fonts/DattoDIN-Bold.woff2) format("woff2"),
+                 url(https://www.datto.com/fonts/DattoDIN-Bold.woff) format("woff");
         }
         @font-face {
             font-family: 'D-Din-BoldCondensed';
-            src: url(https://www.datto.com/fonts/DattoDIN-BoldCondensed.woff2) format(woff2),
-                 url(https://www.datto.com/fonts/DattoDIN-BoldCondensed.woff) format(woff);
+            src: url(https://www.datto.com/fonts/DattoDIN-BoldCondensed.woff2) format("woff2"),
+                 url(https://www.datto.com/fonts/DattoDIN-BoldCondensed.woff) format("woff");
+            font-style: normal;
+            font-display: block;
         }
         *,
         *::before
@@ -33,15 +36,33 @@
             color: white;
             margin: 0;
         }
-        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background-image: url(https://raw.githubusercontent.com/risesia/surveyform/master/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 0;
+        }
+        h1 {
+            font-family: 'D-Din-BoldCondensed';
+            font-weight: 100;
+            line-height: 27px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
+            <img src="https://raw.githubusercontent.com/risesia/surveyform/e15ecefc3a35559c09e40ed9b7fc9efc17196015/logo_white.png" alt="logo">
             <h1 id="title" class="text-center">
-                Risesia<br>
-                Projects
+                RISESIA<br>
+                PROJECTS
             </h1>
             <p id="description" class="description text-center">
                 Give your feedback here!
@@ -89,7 +110,7 @@
                 <select id="dropdown" name="game" class="form-control" required>
                     <option selected value="The Archer 2">The Archer 2</option>
                     <option value="Homo Ludens">Homo Ludens</option>
-                    <option value="Nara.">Nara.</option>
+                    <option value="Nara">Nara</option>
                     <option value="Lost in The Forest">Lost in The Forest</option>
                     <option value="Confession of Crime">Confession of Crime</option>
                     <option value="Aurora">Aurora</option>

@@ -53,17 +53,41 @@
             font-family: 'D-Din-BoldCondensed';
             font-weight: 100;
             line-height: 27px;
+            position: relative;
+            right: 18px;
+            }
+        #logo-img {
+            width: 180px;
+            height: auto;
+            position: relative;
+            left: 9px;
         }
+        .logo {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 1.125rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <img src="https://raw.githubusercontent.com/risesia/surveyform/e15ecefc3a35559c09e40ed9b7fc9efc17196015/logo_white.png" alt="logo">
+            <div class="logo">
+            <img id="logo-img" src="https://raw.githubusercontent.com/risesia/surveyform/master/logo_white_cropped.png" alt="logo">
             <h1 id="title" class="text-center">
                 RISESIA<br>
                 PROJECTS
             </h1>
+            </div>
             <p id="description" class="description text-center">
                 Give your feedback here!
             </p>
@@ -208,7 +232,7 @@
                         value="corrupted"
                         type="checkbox"
                         class="input-checkbox"
-                    />corrupted save file
+                    />Corrupted save file
                 </label>
                 <label>
                     <input

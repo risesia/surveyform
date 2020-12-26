@@ -67,7 +67,7 @@
             justify-content: center;
             flex-direction: row;
             align-items: center;
-            margin-top: 30px;
+            margin-top: 40px;
             margin-bottom: 30px;
         }
         p {
@@ -75,7 +75,107 @@
             margin-top: 0;
             margin-bottom: 0.5rem;
         }
-
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+        input,
+        button,
+        select,
+        textarea {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+        button {
+            border: none;
+        }
+        .container {
+            width: 100%;
+            /* 
+            if you want to put credit
+            margin: 3.125rem auto 3.125rem auto; 
+            */
+            margin: 3.125rem auto 0 auto;
+        }
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+        .header {
+            padding: 0 0.625rem;
+            margin-bottom: 1.875rem;
+        }
+        .description {
+            font-size: 1.5rem;
+        }
+        .text-center {
+            text-align: center;
+        }
+        /* form */
+        form {
+            background: #2a2a2a;
+            padding: 2.5rem 0.625rem;
+            border-radius: 0.25rem;
+        }
+        @media (min-width: 480px) {
+            form {
+                padding: 2.5rem;
+            }
+        }
+        .form-group {
+            margin: 0 auto 1.25rem auto;
+            padding: 0.25rem;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 2.375rem;
+            padding: 0.375rem 0.75rem;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out,
+                        box shadow 0.15s ease-in-out;
+        }
+        .form-group:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        .input-radio,
+        .input-checkbox {
+            display: inline-block;
+            margin-right: 0.625rem;
+            min-height: 1.25rem;
+            min-width: 1.25rem;
+        }
+        .input-textarea {
+            min-height: 120px;
+            width: 100%;
+            padding: 0.625rem;
+            resize: vertical;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: green;
+            color: inherit;
+            border-radius: 2px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -83,7 +183,7 @@
         <header class="header">
             <div class="logo">
             <img id="logo-img" src="https://raw.githubusercontent.com/risesia/surveyform/master/logo_white_cropped.png" alt="logo">
-            <h1 id="title" class="text-center">
+            <h1 id="title">
                 RISESIA<br>
                 PROJECTS
             </h1>
@@ -283,5 +383,8 @@
             </div>
         </form>
     </div>
+    <!--
+    <p>do you want to put credit over here?</p>
+    -->
 </body>
 </html>

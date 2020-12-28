@@ -9,22 +9,32 @@
             font-family: 'D-Din-Regular';
             src: url(https://www.datto.com/fonts/DattoDIN-Regular.woff2) format("woff2"),
                  url(https://www.datto.com/fonts/DattoDIN-Regular.woff) format("woff");
+            font-style: normal;
             font-display: block;
         }
         @font-face {
             font-family: 'D-Din-Bold';
             src: url(https://www.datto.com/fonts/DattoDIN-Bold.woff2) format("woff2"),
                  url(https://www.datto.com/fonts/DattoDIN-Bold.woff) format("woff");
+            font-style: normal;
+            font-display: block;
         }
         @font-face {
-            font-family: 'D-Din-BoldCondensed';
+            font-family: 'D-Din-BoldCon';
             src: url(https://www.datto.com/fonts/DattoDIN-BoldCondensed.woff2) format("woff2"),
                  url(https://www.datto.com/fonts/DattoDIN-BoldCondensed.woff) format("woff");
             font-style: normal;
             font-display: block;
         }
+        @font-face {
+            font-family: 'D-Din-BoldExp';
+            src: url(https://www.datto.com/fonts/DattoDINExp-Bold.woff2) format("woff2"),
+                 url(https://www.datto.com/fonts/DattoDINExp-Bold.woff) format("woff");
+            font-style: normal;
+            font-display: block;
+        }
         *,
-        *::before
+        *::before,
         *::after {
             box-sizing: border-box;
         }
@@ -50,7 +60,7 @@
             background-position: 0;
         }
         h1 {
-            font-family: 'D-Din-BoldCondensed';
+            font-family: 'D-Din-BoldCon';
             font-weight: 100;
             line-height: 27px;
             position: relative;
@@ -142,17 +152,31 @@
             height: 2.375rem;
             padding: 0.375rem 0.75rem;
             color: #495057;
-            background-color: #fff;
+            background-color: #2a2a2a;
             background-clip: padding-box;
-            border: 1px solid #ced4da;
-            border-radius: 0.25rem;
+            border: 3px solid #ffffff;
+            border-radius: 0rem;
             transition: border-color 0.15s ease-in-out,
-                        box shadow 0.15s ease-in-out;
+                        box-shadow 0.15s ease-in-out;
+        }
+        #name-label,
+        #email-label,
+        #number-label,
+        #platform-label,
+        #game-label {
+            font-family: 'D-Din-BoldExp';
+            font-size: 25px;
+        }
+        .clue {
+            font-family: 'D-Din-Regular';
+            font-size: 15px;
+            position: relative;
+            left: 3px;
+            top: 5px;
         }
         .form-group:focus {
-            border-color: #80bdff;
+            border-color: #4e0087;
             outline: 0;
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
         }
         .input-radio,
         .input-checkbox {
@@ -230,7 +254,7 @@
                 />
             </div>
             <div class="form-group">
-                <p>Which game that you want to give a feedback?</p>
+                <p id="game-label">GAME</p>
                 <select id="dropdown" name="game" class="form-control" required>
                     <option selected value="The Archer 2">The Archer 2</option>
                     <option value="Homo Ludens">Homo Ludens</option>
@@ -241,7 +265,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <p>PLATFORM</p>
+                <p id="platform-label">PLATFORM</p>
                 <label>
                     <input
                         name="platform"
